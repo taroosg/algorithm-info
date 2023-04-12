@@ -1,8 +1,12 @@
+---
+marp: true
+---
+
 <!--
 theme: gaia
 class:
  - invert
-headingDivider: 2 
+headingDivider: 2
 paginate: true
 -->
 
@@ -12,118 +16,59 @@ _class:
  - invert
 -->
 
-# Deploy Marp to GitHub Pages
+# アルゴリズム基礎論
 
-Presentations to Webpages: Instantly!
+## 第 2 回
 
-## What?
+- コードを書くための準備（ブラウザ・エディタ）は OK？？
 
-[Marp](https://marp.app/) lets you create HTML slides from markdown (like this!).
+## このフェイズの目標
 
-This presentation is both a [website](https://alexsci.com/marp-to-pages) and a [README.md](https://github.com/ralexander-phi/marp-to-pages/blob/main/README.md).
+Web アプリケーションの表現方法を知る．
 
-## Why?
+- ~~2023/04/05：オリエンテーション~~
+- `2023/04/12：HTML`
+- 2023/04/19：CSS
+- 2023/04/26：JavaScript01
 
-Treat your presentation the same way you treat code.
+## 本日やること
 
-- Use git to track changes
-- Pull requests to collaborate
-- Deploy automatically
-- See a problem? Open an issue!
+HTML で自分の書いたコードをブラウザ画面で見えるようにする．
 
-## Setup
+**2006 年の Twitter 画面を実装しよう！！**
 
-Want to create your own?
+![width:500px](./img/twitter_image.png)
 
-First, create a new repo [from the template repo](https://github.com/ralexander-phi/marp-to-pages).
+## 本日の流れ
 
-![](img/use-template.png)
+- 1315：スタート
+- 1325：HTML の位置づけと概要説明
+- 1330：開発の流れの解説，HTML を書いて動かしてみよう
+- 1400：HTML を書くときの考え方，よく使うタグの解説
+- 1420：Twitter 画面を作ってみよう
+- 1445：休憩
+- 1500：演習スタート
+- 1610：課題の提出案内
+- 1625：次回の案内 → 終了
 
-## Configure GitHub Pages
+## それではスタート！！
 
-Open your new repo and [setup publishing](https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source).
+## おつかれさまでした！
 
-You'll typically use `gh-pages` as the deploy branch.
+- HTML は動きましたか？？
+- HTML を使うと，自分の書いたことをブラウザ画面に表示できる！
 
-## Review Build
+**課題の提出も忘れずに！**
 
-Click on Actions tab and see if the build succeeded (it may take some time).
+特に前半は可能な限り応用課題にチャレンジしましょう！
 
-![](img/click-actions.png)
+講義では毎回新しい内容が出てきます．前回までの内容に慣れていると楽に進めるので，応用課題にチャレンジしましょう！
 
-You should now see the generated files in the `gh-pages` branch.
+## 次回
 
-## View webpage
+**次回はオンライン講義です．** 受講場所は同じですが，講師はオンラインです．
 
-Open your deployed webpage to see the content.
+HTML に続き，CSS を書いてみましょう！
 
-Out of the box you should see `README.md` as `/index.html` and `/README.pdf`. Slides under `docs/` are also converted.
-
-## Running locally
-
-Locally you'll run commands like:
-
-```
-$ marp README.md -o build/README.pdf
-```
-
-or
-
-```
-$ npx @marp-team/marp-cli@latest README.md -o build/README.pdf
-```
-
-## As a workflow step
-
-The workflow runs an equivalent step:
-
-```
-- name: Marp Build (README.pdf)
-  uses: docker://marpteam/marp-cli:v1.7.0
-  with:
-    args: README.md -o build/README.pdf
-  env:
-    MARP_USER: root:root
-```
-
-Note the `args` match the previous slide.
-
-## Customizing the build
-
-Anything in the `build/` folder will be deployed to GitHub Pages.
-
-You can copy extra files or run further processing steps using other tools.
-
-## Learn more about Marp
-
-This is a good time to learn more about Marp. Here's some resources:
-
-- [CommonMark](https://commonmark.org/)
-- [Cheat Sheet](https://commonmark.org/help/)
-- [Themes](https://github.com/marp-team/marp-core/tree/master/themes)
-- [CSS Themes](https://marpit.marp.app/theme-css)
-- [Directives](https://marpit.marp.app/directives)
-- [VS Code plugin](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
-
-## Example Sites
-
-Known sites using this action are:
-
-- [University of Illinois at Urbana-Champaign's CS 199 Even More Practice](https://cs199emp.netlify.app/) [(code)](https://github.com/harsh183/emp-125)
-- [Exploring agent based models](https://roiarthurb.github.io/Talk-UMMISCO_06-07-2020/) [(code)](https://github.com/RoiArthurB/Talk-UMMISCO_06-07-2020)
-
-Send a [pull request](https://github.com/ralexander-phi/marp-to-pages) to get your site added.
-
-## Publish your slides
-
-When you are ready to share your presentation, commit or merge to `main` and your content on GitHub Pages will automatically update.
-
-# 🎉
-<!--
-_class:
- - lead
- - invert
--->
-### Hooray!
-
-
+- HTML は「何を」表示するか．
+- CSS は「どのように」表示するか．
